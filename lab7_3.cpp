@@ -4,20 +4,10 @@ using namespace std;
 
 int adiff(int a, int b)
 {
-  a = a%360;
-  b = b%360;
-  int c = a - b;
+  int c = abs((a - b)%360);
   if(c > 180)
   {
     c = 360 - c;
-  }
-  if(c < -180)
-  {
-    c = c + 360;
-  }
-  if(c < 0)
-  {
-    c = -c;
   }
   return c;
 }
